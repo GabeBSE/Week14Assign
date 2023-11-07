@@ -6,11 +6,12 @@ class Movie extends Component {
   constructor(props) {
     super(props);
 
-    this.state = {
-      userReview: '',
+    this.state = {   // Initialize the state within the Movie component
+      userReview: '',  // Initialize user's review text
     };
   }
 
+  // Handle the submission of a review
   handleInputChange = (e) => {
     this.setState({ userReview: e.target.value });
   };
@@ -28,9 +29,10 @@ class Movie extends Component {
     }
   };
 
-  render() {
+  render() {  //Here is where the images, title, rating, a list of reviews,
+              //a review input form, with button are displayed. 
     const { movie } = this.props;
-
+              //These components receive movie data as props and show it with a user review input form.
     return (
       <div className="movie">
         <img src={require(`./Images/${movie.image}`)} alt={movie.title} />
@@ -53,7 +55,8 @@ class Movie extends Component {
             onChange={this.handleInputChange}
           />
           <button onClick={this.onReviewSubmit} className="btn btn-primary">
-            Submit Review
+            Submit Review {/*onReviewSubmit function is called when the Submit
+                          Review button is clicked to handle review submittions */}
           </button>
         </div>
       </div>

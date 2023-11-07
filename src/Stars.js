@@ -17,7 +17,7 @@ class Stars extends Component {
     this.setState({ hoverRating: newRating });
   };
 
-  render() {
+  render() {                      //This is what is showing the  rating system on the movie cards
     const { rating, hoverRating } = this.state;
 
     const renderStars = () => {
@@ -38,7 +38,7 @@ class Stars extends Component {
       return stars;
     };
 
-    return (
+    return (        
       <div className="stars">
         {renderStars()}
         <p>Rating: {rating} out of 5</p>

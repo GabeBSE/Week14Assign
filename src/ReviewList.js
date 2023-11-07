@@ -1,6 +1,6 @@
 import React from 'react';
 import Review from './Review';
-
+                                  // This a container inside of a Movie that holds Review components
 
 const ReviewList = ({ reviews }) => {
   return (

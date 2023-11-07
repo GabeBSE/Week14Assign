@@ -25,7 +25,8 @@ class MovieList extends Component {
     };
   }
 
-  // You can add methods for handling data and interactions here COMPLETED
+  // Methods for handling data and interactions here - COMPLETED
+
   // Define the onReviewSubmit function
    onReviewSubmit = (movieId, review) =>  {
     // Create a copy of the movies array
@@ -44,12 +45,12 @@ class MovieList extends Component {
 
   render() {
     return (
-      <div> {/* Render the main page of the Movie-Rate application */}
+      <div> {/* Shows the main page of my Movie-Rate app */}
         <h1 className="movie-list-title">Movie-Rate</h1>
         <div className="row">
           {this.state.movies.map((movie) => (
             <div className="col-md-4" key={movie.id}>
-              <Movie movie={movie} onReviewSubmit={this.onReviewSubmit} /> {/* Render individual movie cards with review functionality */}
+              <Movie movie={movie} onReviewSubmit={this.onReviewSubmit} /> {/*Shows individual movie cards with review functionality */}
             </div>
            
           ))}
