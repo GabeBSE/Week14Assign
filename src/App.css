@@ -1,38 +1,120 @@
+/* App Container */
 .App {
+  text-align: center;
+  background-color: #080808;
+  font-family: Arial, sans-serif;
+  padding: 20px; 
+}
+
+/* Movie List Styles */
+.movie-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Movie Styles */
+.movie {
+  color: White;
+  border: 8px double #1c0792;
+  margin: 0 10px 20px 10px; /* Adjust the margin */
+  padding: 10px;
+  text-align: center;
+  border-radius: 5px;
+  background-color: rgb(65, 66, 65);
+  position: relative; /* Set the movie component as a positioning context */
+  /* Add this style to make the review form and button stationary */
+  overflow-y:hidden; /* Enable vertical scrolling within the movie component */
+
+}
+
+  .movie-list-title {
+    /* Your styles for the <h1> element go here */
+    color: rgb(208, 248, 10); /* Example: Change text color to red */
+    font-size: 40px; /* Example: Increase font size */
+    margin-bottom: 50px;
+  }
+
+
+.movie h2 {
+  font-size: 1.5rem;
+  margin: 10px 0;
+}
+
+.movie img {
+  height: 500px; /* Adjust the height */
+  width: 100%; /* Set the width to 100% to maintain aspect ratio */
+  object-fit: cover;
+  display: block;
+  margin: 0 auto; /* Center the image */
+}
+
+.movie p {
+  font-size: 1rem; /* Adjust the font size */
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+
+/* Stars Component Styles */
+.star {
+  font-size: 1.5rem;
+  color: #f2f5f2;
+  margin: 0 5px; /* Adjust the margin between stars */
+  /*text-align: center; */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.star.filled {
+  color: Gold; /* Color for unfilled stars */
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.star.selected {
+  color: #ebc20f; /* Color for unfilled stars */
 }
 
-.App-link {
-  color: #61dafb;
+
+/* Review Form Styles */
+.form-group {
+  margin: 10px 0; /* Add some margin to separate the review form */
+  border: 2px solid #202020;
+  border-radius: 8px;
+  top: 10px; /* Adjust this value to control the distance from the top */
+  background: rgb(88, 87, 92); /* Write your review, main box background color*/
+  padding: 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Submit Review Button Styles */
+button[type="submit"] {
+  margin-top: 10px; /* Add margin to separate the button from the form */
+}
+
+
+/* CSS for the ReviewDisplay component */
+
+.review-display h2 {
+  font-size: 1.5rem;
+  margin: 10px 0;  
+}
+
+.review-list {
+  max-height: 100px; /* Adjust the maximum height as needed */
+  overflow-y:scroll; /* Add vertical scrollbar if reviews exceed the height */
+  margin-top: 10px;
+  border: 3px solid rgb(12, 12, 12);
+  border-radius: 5px;
+  
+}
+
+
+.review-list h2{
+  position:sticky;
+  top: 0; /* Adjust this value to control the distance from the top */
+  background:rgb(65, 66, 65); /* Optional: Add a background to make it stand out */
+  padding: 10px;
+  
+}
+
+.btn-primary {
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
